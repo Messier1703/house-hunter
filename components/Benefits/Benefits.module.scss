@@ -1,0 +1,88 @@
+.benefits {
+    position: relative;
+
+    &_dot_ornament{
+        position: absolute;
+        left: -60px;
+        top: -56px;
+    }
+
+    &_rectangle_deco{
+        position: absolute;
+        top: 12px;
+        left: -38px;
+    }
+    
+    &_content{
+        display: flex;
+        padding: 56px 0 140px;
+    }
+
+    &_list {
+        position: relative;
+        
+        &_title {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            text-transform: capitalize;
+            color: #f59e0b;
+        }
+
+        &_desc {
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 40px;
+            text-transform: capitalize;
+            color: #1b1c57;
+            padding: 11px 0 62px;
+        }
+
+        &_number {
+            font-family: "Mulish";
+            font-weight: 800;
+            font-size: 80px;
+            line-height: 90px;
+            letter-spacing: 0.888889px;
+            color: #1ea59a;
+        }
+
+        &_info {
+            font-family: "Mulish";
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 25px;
+            letter-spacing: 0.346154px;
+            color: #404852;
+            padding: 1px 0 67px;
+        }
+    }
+
+    &_perks {
+        background: #f6fafa;
+        box-shadow: 12px 16px 25px rgba(0, 0, 0, 0.04);
+        padding: 50px 90px;
+
+        &_card {
+            display: flex;
+            padding-bottom: 86px;
+
+            &_title {
+                font-family: "Mulish";
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 25px;
+                letter-spacing: 0.352941px;
+                color: #000b70;
+                padding: 0 0 10px 30px;
+            }
+
+            &_desc {
+                font-size: 18px;
+                line-height: 28px;
+                color: #b1b6ca;
+                padding-left: 30px;
+            }
+        }
+    }
+}
