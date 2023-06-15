@@ -7,10 +7,10 @@ const Benefits = () => {
     return (
         <div className={s.benefits}>
             <div className="container">
-                <div className={s.benefits_content}>
+                <div className={s.benefits_wrapper}>
                     <div className={s.benefits_list}>
-                <Image src="/dot-ornament.png" className={s.benefits_dot_ornament} width={90} height={100} />
-                <Image src="/rectangle-deco.png" className={s.benefits_rectangle_deco} width={32} height={1} />
+                        <Image src="/dot-ornament.png" className={s.benefits_dot_ornament} width={90} height={100} />
+                        <Image src="/rectangle-deco.png" className={s.benefits_rectangle_deco} width={32} height={1} />
                         <h6 className={s.benefits_list_title}>Benefit</h6>
                         <h3 className={s.benefits_list_desc}>Benefit You Get When Using Our Services</h3>
                         <h2 className={s.benefits_list_number}>600+</h2>
