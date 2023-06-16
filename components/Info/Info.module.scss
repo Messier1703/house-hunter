@@ -1,0 +1,13 @@
+$featuredArticleBg: require('/public/featured-article-bg.png');
+
+.info{
+
+    &_articles{
+        &_featured{
+            background: grey;
+            width: 560px;
+            height: 327px;
+            border-radius: 16px;
+        }
+    }
+}
