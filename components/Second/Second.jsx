@@ -78,13 +78,13 @@ const Second = () => {
                             prevEl: `.${s.featured_swiper_prev}`,
                             nextEl: `.${s.featured_swiper_next}`,
                         }}
-                        slidesPerView={4}
+                        slidesPerView={5}
                         speed={700}
                         modules={[Navigation]}
                         centeredSlides={true}
                         centeredSlidesBounds={true}
                         className={s.featured_swiper}
-                        // spaceBetween={40}
+                        spaceBetween={40}
                     >
                         {featuredHouses.map((item) => (
                             <SwiperSlide key={item.id}>

@@ -3,7 +3,6 @@
 }
 
 .featured {
-    // padding: 196px 0 140px;
 
     &_wrapper{
         padding-bottom: 50px;
@@ -35,6 +34,7 @@
             padding: 14px 24px;
             display: flex;
             align-items: center;
+            height: min-content;
 
             svg {
                 fill: #888b97;
@@ -119,6 +119,7 @@
                 padding: 12px 16px;
                 display: flex;
                 align-items: center;
+                height: min-content;
 
                 svg {
                     fill: #3c4563;
