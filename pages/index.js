@@ -7,6 +7,7 @@ import Second from "@/components/Second/Second";
 import Benefits from "@/components/Benefits/Benefits";
 import Reviews from "@/components/Reviews/Reviews";
 import Info from "@/components/Info/Info";
+import Tour from "@/components/Tour/Tour";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,8 +29,9 @@ export default function Home() {
             <First />
             <Second />
             <Benefits />
+            <Tour />
             <Reviews />
-            <Info/>
+            <Info />
         </>
     );
 }

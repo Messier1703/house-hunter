@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import s from "./First.module.scss";
+import { firstHouses } from "@/constants/firstHouses";
 import { partnerships } from "@/constants/Partnerships";
 
 const First = () => {
@@ -9,7 +10,11 @@ const First = () => {
             <div className="container">
                 <div className={s.first_wrapper}>
                     <h1 className={s.first_title}>
-                        Good Living Better live <span className={s.first_title_outlined}>your dreams</span> easily here
+                        Good Living Better live{" "}
+                        <span className={s.first_title_outlined}>
+                            your dreams
+                        </span>{" "}
+                        easily here
                     </h1>
                     <p className={s.first_desc}>
                         Everything you need about finding your place to live
@@ -18,18 +23,20 @@ const First = () => {
                         materials that are suitable for your dream home
                     </p>
                     <div className={s.first_search}>
-                        <svg
-                            width="18"
-                            height="22"
-                            viewBox="0 0 18 22"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M9 0C11.3869 0 13.6761 0.993372 15.364 2.76159C17.0518 4.5298 18 6.92801 18 9.42865C18 13.934 15.0975 18.081 9.402 21.8776C9.28181 21.9575 9.14237 22 9 22C8.85763 22 8.71819 21.9575 8.598 21.8776C2.9025 18.081 0 13.934 0 9.42865C0 6.92801 0.948211 4.5298 2.63604 2.76159C4.32387 0.993372 6.61305 0 9 0ZM9 6.28576C8.20435 6.28576 7.44129 6.61689 6.87868 7.20629C6.31607 7.7957 6 8.5951 6 9.42865C6 10.2622 6.31607 11.0616 6.87868 11.651C7.44129 12.2404 8.20435 12.5715 9 12.5715C9.79565 12.5715 10.5587 12.2404 11.1213 11.651C11.6839 11.0616 12 10.2622 12 9.42865C12 8.5951 11.6839 7.7957 11.1213 7.20629C10.5587 6.61689 9.79565 6.28576 9 6.28576Z"
-                                fill="#F2994A"
-                            />
-                        </svg>
+                        <div className={s.first_search_logo}>
+                            <svg
+                                width="18"
+                                height="22"
+                                viewBox="0 0 18 22"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M9 0C11.3869 0 13.6761 0.993372 15.364 2.76159C17.0518 4.5298 18 6.92801 18 9.42865C18 13.934 15.0975 18.081 9.402 21.8776C9.28181 21.9575 9.14237 22 9 22C8.85763 22 8.71819 21.9575 8.598 21.8776C2.9025 18.081 0 13.934 0 9.42865C0 6.92801 0.948211 4.5298 2.63604 2.76159C4.32387 0.993372 6.61305 0 9 0ZM9 6.28576C8.20435 6.28576 7.44129 6.61689 6.87868 7.20629C6.31607 7.7957 6 8.5951 6 9.42865C6 10.2622 6.31607 11.0616 6.87868 11.651C7.44129 12.2404 8.20435 12.5715 9 12.5715C9.79565 12.5715 10.5587 12.2404 11.1213 11.651C11.6839 11.0616 12 10.2622 12 9.42865C12 8.5951 11.6839 7.7957 11.1213 7.20629C10.5587 6.61689 9.79565 6.28576 9 6.28576Z"
+                                    fill="#F2994A"
+                                />
+                            </svg>
+                        </div>
                         <input
                             type="text"
                             placeholder="Search for the location you want!"
@@ -66,6 +73,42 @@ const First = () => {
                                 />
                             ))}
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div className={s.first_houses}>
+                {firstHouses.map((item) => (
+                    <div
+                        className={s.first_houses_card}
+                        style={{
+                            backgroundImage: `url(${item.img})`,
+                            backgroundSize: "cover",
+                            backgroundPosition: "center",
+                        }}
+                        id={item.id}
+                    />
+                ))}
+            </div>
+            <div className={s.first_stats}>
+                <div className={s.first_stats_card}>
+                    <Image src="/stats-pic.png" width={171} height={121} className={s.first_stats_card_img}/>
+                    <div>
+                        <h2 className={s.first_stats_title}>1K+ People</h2>
+                        <p className={s.first_stats_details}>Successfully Getting Home</p>
+                    </div>
+                </div>
+                <div className={s.first_stats_card}>
+                    <Image src="/stats-villa.png" width={57} height={57} className={s.first_stats_card_img}/>
+                    <div>
+                        <h2 className={s.first_stats_title}>1K+ People</h2>
+                        <p className={s.first_stats_details}>Successfully Getting Home</p>
+                    </div>
+                </div>
+                <div className={s.first_stats_card}>
+                    <Image src="/stats-pfp.png" width={121} height={121} className={s.first_stats_card_img}/>
+                    <div>
+                        <h2 className={s.first_stats_title}>1K+ People</h2>
+                        <p className={s.first_stats_details}>Successfully Getting Home</p>
                     </div>
                 </div>
             </div>

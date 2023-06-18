@@ -4,7 +4,8 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    background-color: lightgreen;
+    z-index: 2;
+    position: relative;
 
     &_links {
         display: flex;

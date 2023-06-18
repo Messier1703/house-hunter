@@ -1,13 +1,125 @@
-$featuredArticleBg: require('/public/featured-article-bg.png');
+.articles {
+    padding: 140px 0;
 
-.info{
+    &_title {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: center;
+        text-transform: capitalize;
+        color: #f59e0b;
+    }
 
-    &_articles{
-        &_featured{
-            background: grey;
-            width: 560px;
-            height: 327px;
-            border-radius: 16px;
+    &_desc {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 40px;
+        text-align: center;
+        text-transform: capitalize;
+        color: #1b1c57;
+        padding: 14px 0 55px;
+    }
+
+    &_wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 42px;
+
+        &_info {
+            padding: 0 68px 0 32px;
+        }
+
+        &_name {
+            display: flex;
+            align-items: center;
+
+            p {
+                font-size: 14px;
+                line-height: 22px;
+                color: #3c4563;
+                padding-left: 16px;
+            }
+        }
+
+        &_read {
+            display: flex;
+            align-items: center;
+        }
+
+        &_title {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 32px;
+            text-transform: capitalize;
+            color: #1b1c57;
+            padding: 12px 0 16px;
+        }
+
+        &_time {
+            font-size: 14px;
+            line-height: 24px;
+            color: #888b97;
+            padding-left: 12px;
+        }
+    }
+
+    &_featured {
+        background: grey;
+        width: 560px;
+        height: 327px;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 20px 27px;
+
+        &_name {
+            display: flex;
+            align-items: center;
+
+            h6 {
+                padding-left: 16px;
+            }
+        }
+
+        &_time {
+            display: flex;
+            align-items: center;
+
+            p {
+                font-size: 14px;
+                line-height: 24px;
+                color: #f2f2f2;
+                padding-left: 12px;
+            }
+        }
+
+        &_title {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 32px;
+            text-transform: capitalize;
+            color: #f2f2f2;
+            padding: 12px 0 16px;
+        }
+
+        &_name {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 22px;
+            color: #f2f2f2;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 24px;
+            color: #f2f2f2;
         }
     }
 }

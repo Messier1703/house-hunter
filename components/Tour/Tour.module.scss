@@ -1,0 +1,60 @@
+.tour {
+padding-bottom: 140px;
+
+    &_wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    &_title {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        text-transform: capitalize;
+        color: #f59e0b;
+    }
+
+    &_desc {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 40px;
+        text-transform: capitalize;
+        color: #1b1c57;
+    }
+
+    &_details {
+        font-size: 16px;
+        line-height: 28px;
+        color: #626687;
+        opacity: 0.75;
+    }
+
+    &_house{
+        div{
+            display: flex;
+            align-items: center;
+
+            span{
+                padding-left: 16px;
+            }
+
+            &:first-child{
+
+            }
+        }
+    }
+
+    &_video {
+        // width: 200px;
+        // height: 200px;
+        background: linear-gradient(
+            111.29deg,
+            rgba(255, 255, 255, 0.53) -1.83%,
+            rgba(255, 255, 255, 0) 109.95%
+        );
+        box-shadow: 50px 60px 100px rgba(0, 0, 0, 0.05);
+        backdrop-filter: blur(35px);
+        border-radius: 12px;
+        padding: 35px 42px 37px;
+    }
+}

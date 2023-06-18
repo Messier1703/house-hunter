@@ -1,35 +1,49 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay } from "swiper";
-import { Navigation } from 'swiper';
-import { secondNav } from '@/constants/SecondNav';
-import Image from 'next/image';
-import s from './Second.module.scss';
-import { featuredHouses } from '@/constants/featuredHouses';
+import { Navigation } from "swiper";
+import { secondNav } from "@/constants/SecondNav";
+import Image from "next/image";
+import s from "./Second.module.scss";
+import { featuredHouses } from "@/constants/featuredHouses";
 
 const Second = () => {
     return (
         <div>
             <div className={s.featured}>
                 <div className="container">
-                    <div className={s.featured_content}>
-                        <Image src="/rectangle-deco.png" width={32} height={1} className={s.rectangle_deco} />
+                    <div className={s.featured_wrapper}>
+                        <Image
+                            src="/rectangle-deco.png"
+                            width={32}
+                            height={1}
+                            className={s.rectangle_deco}
+                        />
                         <div className={s.featured_nav}>
                             <div>
-                                <h6 className={s.featured_desc}>Our Recommendation</h6>
-                                <h2 className={s.featured_title}>Featured House</h2>
+                                <h6 className={s.featured_desc}>
+                                    Our Recommendation
+                                </h6>
+                                <h2 className={s.featured_title}>
+                                    Featured House
+                                </h2>
                             </div>
                             {secondNav.map((item) => (
-                                <button key={item.id} className={s.featured_nav_btn}>
+                                <button
+                                    key={item.id}
+                                    className={s.featured_nav_btn}
+                                >
                                     {item.img}
                                     <span>{item.label}</span>
                                 </button>
                             ))}
                             <div className={s.featured_swiper_nav}>
-                                <button className={`${s.featured_swiper_next} ${s.featured_swiper_nav_btn}`}>
+                                <button
+                                    className={`${s.featured_swiper_next} ${s.featured_swiper_nav_btn}`}
+                                >
                                     <svg
                                         width="28"
                                         height="28"
@@ -40,7 +54,9 @@ const Second = () => {
                                         <path d="M17.5077 22.1645C17.778 22.165 18.04 22.0703 18.2481 21.8967C18.3653 21.799 18.4621 21.679 18.5331 21.5436C18.604 21.4081 18.6478 21.2599 18.6617 21.1075C18.6757 20.955 18.6597 20.8012 18.6145 20.655C18.5693 20.5088 18.4959 20.373 18.3985 20.2554L13.2157 14.0159L18.2134 7.76475C18.3095 7.64567 18.3813 7.50867 18.4246 7.3616C18.4679 7.21453 18.4819 7.0603 18.4657 6.90777C18.4496 6.75524 18.4037 6.60742 18.3306 6.47281C18.2575 6.3382 18.1587 6.21945 18.0399 6.12339C17.9202 6.01741 17.78 5.93748 17.6282 5.8886C17.4763 5.83972 17.316 5.82295 17.1574 5.83935C16.9988 5.85574 16.8453 5.90495 16.7065 5.98388C16.5677 6.0628 16.4466 6.16975 16.3508 6.298L10.7631 13.2825C10.593 13.4908 10.5 13.7521 10.5 14.0217C10.5 14.2913 10.593 14.5526 10.7631 14.7609L16.5475 21.7454C16.6636 21.8863 16.811 21.9976 16.9778 22.0705C17.1447 22.1433 17.3262 22.1755 17.5077 22.1645Z" />
                                     </svg>
                                 </button>
-                                <button className={`${s.featured_swiper_prev} ${s.featured_swiper_nav_btn}`}>
+                                <button
+                                    className={`${s.featured_swiper_prev} ${s.featured_swiper_nav_btn}`}
+                                >
                                     <svg
                                         width="28"
                                         height="28"
@@ -53,42 +69,89 @@ const Second = () => {
                                 </button>
                             </div>
                         </div>
-                        <div className="featured_swiper">
-                            <Swiper
-                                loop
-                                navigation={{
-                                    prevEl: `.${s.featured_swiper_prev}`,
-                                    nextEl: `.${s.featured_swiper_next}`,
-                                }}
-                                slidesPerView={4}
-                                speed={700}
-                                modules={[Navigation]}
-                                centeredSlides={true}
-                                centeredSlidesBounds={true}
-                                className="featured_swiper"
-                                spaceBetween={20}
-                            >
-                                {featuredHouses.map((item) => (
-                                    <SwiperSlide key={item.id}>
-                                        <div className={s.featured_swiper_slide}>
-                                            <div className={s.featured_swiper_slide_house}>
-                                                <Image src={item.img} width={340} height={382} />
-                                                <h3 className={s.featured_swiper_slide_title}>{item.title}</h3>
-                                                <p className={s.featured_swiper_slide_price}>{item.price}</p>
-                                            </div>
-                                            <div className={s.featured_swiper_slide_seller}>
-                                                <Image className={s.featured_swiper_slide_pfp} src={item.pfp} width={40} height={40} />
-                                                <div>
-                                                    <h3 className={s.featured_swiper_slide_sellerName}>{item.sellerName}</h3>
-                                                    <p className={s.featured_swiper_slide_address}>{item.address}</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </SwiperSlide>
-                                ))}
-                            </Swiper>
-                        </div>
                     </div>
+                </div>
+                <div className={s.featured_swiper}>
+                    <Swiper
+                        loop
+                        navigation={{
+                            prevEl: `.${s.featured_swiper_prev}`,
+                            nextEl: `.${s.featured_swiper_next}`,
+                        }}
+                        slidesPerView={4}
+                        speed={700}
+                        modules={[Navigation]}
+                        centeredSlides={true}
+                        centeredSlidesBounds={true}
+                        className={s.featured_swiper}
+                        // spaceBetween={40}
+                    >
+                        {featuredHouses.map((item) => (
+                            <SwiperSlide key={item.id}>
+                                <div className={s.featured_swiper_slide}>
+                                    <div
+                                        className={
+                                            s.featured_swiper_slide_house
+                                        }
+                                    >
+                                        <Image
+                                            src={item.img}
+                                            width={340}
+                                            height={382}
+                                        />
+                                        <h3
+                                            className={
+                                                s.featured_swiper_slide_title
+                                            }
+                                        >
+                                            {item.title}
+                                        </h3>
+                                        <p
+                                            className={
+                                                s.featured_swiper_slide_price
+                                            }
+                                        >
+                                            {item.price}
+                                        </p>
+                                    </div>
+                                    <div
+                                        className={
+                                            s.featured_swiper_slide_seller
+                                        }
+                                    >
+                                        <Image
+                                            className={
+                                                s.featured_swiper_slide_pfp
+                                            }
+                                            src={item.pfp}
+                                            width={40}
+                                            height={40}
+                                        />
+                                        <div
+                                            className={
+                                                s.featured_swiper_slide_seller_info
+                                            }
+                                        >
+                                            <h3
+                                                className={
+                                                    s.featured_swiper_slide_name
+                                                }
+                                            >
+                                                {item.sellerName}
+                                            </h3>
+                                            <p
+                                                className={
+                                                    s.featured_swiper_slide_address
+                                                }
+                                            >
+                                                {item.address}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
                 </div>
             </div>
         </div>
