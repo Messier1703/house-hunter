@@ -1,11 +1,26 @@
 .tour {
-padding-bottom: 140px;
+    padding-bottom: 140px;
 
-    &_wrapper{
+    &_wrapper {
         display: flex;
         justify-content: space-between;
+
+        @media (max-width: 960px) {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
     }
-    
+
+    &_text {
+        width: 50%;
+
+        @media (max-width: 960px) {
+            width: 100%;
+        }
+    }
+
     &_title {
         font-weight: 500;
         font-size: 14px;
@@ -30,40 +45,52 @@ padding-bottom: 140px;
         opacity: 0.75;
     }
 
-    &_details{
-        &_title{
+    &_details {
+        &_title {
             font-weight: 600;
-font-size: 16px;
-line-height: 28px;
-color: #1B1C57;
-opacity: 0.75;
-padding: 16px 0 ;
+            font-size: 16px;
+            line-height: 28px;
+            color: #1B1C57;
+            opacity: 0.75;
+            padding: 16px 0;
         }
     }
 
-    &_house{
-        display: flex;
+    &_house {
+        @media(max-width: 960px){
+            display: flex;
+            justify-content: center;
+        }
+
+        &_icons{
+            display: flex;
+            align-items: center;
+        }
     }
 
     &_video {
-        // width: 200px;
-        // height: 200px;
-        background: linear-gradient(
-            111.29deg,
-            rgba(255, 255, 255, 0.53) -1.83%,
-            rgba(255, 255, 255, 0) 109.95%
-        );
+        width: 50%;
+        background: linear-gradient(111.29deg,
+                rgba(255, 255, 255, 0.53) -1.83%,
+                rgba(255, 255, 255, 0) 109.95%);
         box-shadow: 50px 60px 100px rgba(0, 0, 0, 0.05);
         backdrop-filter: blur(35px);
         border-radius: 12px;
         padding: 35px 42px 37px;
-        height: 444px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
 
-        &_wrapper{
+        @media (max-width: 960px) {
+            width: 100%;
+        }
+
+        &_wrapper {
             width: 620px;
+        }
+
+        &_btn{
+            padding-bottom: 24px;
         }
     }
 }

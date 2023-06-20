@@ -21,7 +21,9 @@ const Benefits = () => {
                     <div className={s.benefits_perks}>
                         {perks.map((item) => (
                             <div className={s.benefits_perks_card}>
+                                <div className={s.benefits_perks_icon}>
                                 {item.icon}
+                                </div>
                                 <div>
                                     <h3 className={s.benefits_perks_card_title}>{item.title}</h3>
                                     <p className={s.benefits_perks_card_desc}>{item.desc}</p>
