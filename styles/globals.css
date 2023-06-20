@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     font-family: "Lexend", Arial, Helvetica, sans-serif;
+    /* background: #E5E5E5; */
 }
 
 h1,
@@ -28,8 +29,15 @@ a {
     max-width: 1240px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 1% 0 1%;
+    padding: 0 1%;
+    position: relative;
 }
+
+@media(max-width: 960px) {
+        .container{
+            padding: 0 3%;
+        }
+    }
 
 li {
     list-style: none;

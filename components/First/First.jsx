@@ -84,6 +84,7 @@ const First = () => {
                             backgroundImage: `url(${item.img})`,
                             backgroundSize: "cover",
                             backgroundPosition: "center",
+                            
                         }}
                         id={item.id}
                     />

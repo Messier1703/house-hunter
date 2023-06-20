@@ -23,16 +23,49 @@
     &_wrapper {
         display: flex;
         justify-content: space-between;
+
+        @media (max-width: 960px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &_cards {
+        @media (max-width: 960px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &_card {
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
         align-items: center;
         padding-bottom: 42px;
 
+        @media (max-width: 560px) {
+            flex-direction: column;
+            text-align: center;
+            justify-content: space-around;
+        }
+
+        &_img {
+            @media (max-width: 560px) {
+                width: 400px;
+                height: 288px;
+            }
+        }
+
         &_info {
             padding: 0 68px 0 32px;
+            @media (max-width: 560px) {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+                padding: 0;
+            }
         }
 
         &_name {
@@ -58,7 +91,7 @@
             line-height: 32px;
             text-transform: capitalize;
             color: #1b1c57;
-            padding: 12px 0 16px;
+            padding: 2% 0 3%;
         }
 
         &_time {
@@ -71,13 +104,17 @@
 
     &_featured {
         background: grey;
-        width: 560px;
+        width: 60%;
         height: 327px;
         border-radius: 16px;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        padding: 20px 27px;
+        padding: 2% 3%;
+
+        @media(max-width: 960px){
+            width: 100%;
+        }
 
         &_name {
             display: flex;

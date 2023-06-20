@@ -21,26 +21,21 @@ const Reviews = () => {
                 <h6 className={s.reviews_title}>See Our Review</h6>
                 <h2 className={s.reviews_desc}>What Our User Say About Us</h2>
             </div>
-            <div className={s.reviews_swiper}>
+            <div className={s.reviews_swiper_wrapper}>
                 <Swiper
-                    slidesPerView={3}
-                    spaceBetween={360}
+                    slidesPerView={1}
+                    spaceBetween={56}
+                    centeredSlides={true}
+                    centeredSlidesBounds={true}
                     loop
                     speed={1100}
                     // autoplay={{
                     //     delay: 2000,
                     //     disableOnInteraction: false,
                     // }}
+                    className="swiper"
                     breakpoints={{
-                        1009: {
-                            slidesPerView: 3,
-                        },
-                        595: {
-                            slidesPerView: 2,
-                        },
-                        320: {
-                            slidesPerView: 1,
-                        },
+                        
                     }}
                     modules={[Autoplay]}
                 >

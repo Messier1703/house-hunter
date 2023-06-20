@@ -21,6 +21,7 @@ const Info = () => {
                                     src={item.img}
                                     width={200}
                                     height={144}
+                                    className={s.articles_card_img}
                                 />
                                 <div className={s.articles_card_info}>
                                     <div className={s.articles_card_name}>
@@ -62,8 +63,8 @@ const Info = () => {
                             backgroundImage: "url(/featured-article-bg.png)",
                             backgroundSize: "cover",
                             backgroundPosition: "center",
-                            width: "560px",
-                            height: "327px",
+                            // width: "560px",
+                            // height: "327px",
                             position: "relative",
                         }}
                     >

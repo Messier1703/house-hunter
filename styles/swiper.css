@@ -1,37 +1,45 @@
-/* .second_swiper {
+.swiper {
     width: 100%;
     position: relative;
     overflow: hidden;
-    
-  }
-  
-  .second_swiper .swiper-slide {
+}
+
+.swiper .swiper-slide {
     padding: 10px;
-  }
-  
-  .swiper-slide {
+}
+
+.swiper-slide{
+  display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: transform 0.5s ease-out;
+}
+
+.swiper  {
     display: flex !important;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     transition: transform 0.5s ease-out;
-  }
-  
-  .swiper-slide-next {
+}
+
+.swiper-slide-next {
     transition-duration: 0.3s;
     transition-timing-function: ease-in-out;
-  }
-  
-  .swiper-slide-active {
+}
+
+.swiper-slide-active {
     transition-duration: 0.7s;
     transition-timing-function: ease-in-out;
-  }
-  
-  .swiper-slide-prev {
+}
+
+.swiper-slide-prev {
     transition-duration: 0.3s;
     transition-timing-function: ease-in-out;
-  }
-  
-  .custom_btns {
+}
+
+.custom_btns {
     position: absolute;
     width: 50%;
     margin: 0 auto;
@@ -39,11 +47,11 @@
     bottom: 0;
     right: 0;
     left: 0;
-  }
-  
-  .swiper-button-prev,
-  .swiper-button-next {
+}
+
+.swiper-button-prev,
+.swiper-button-next {
     position: absolute;
     top: 50%;
     transform: translateY(-10%);
-  } */
+}

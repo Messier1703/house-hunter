@@ -14,34 +14,35 @@ padding-bottom: 140px;
         color: #f59e0b;
     }
 
-    &_desc {
+    &_subtitle {
         font-weight: 600;
         font-size: 32px;
         line-height: 40px;
         text-transform: capitalize;
         color: #1b1c57;
+        padding: 12px 0 16px;
     }
 
-    &_details {
+    &_desc {
         font-size: 16px;
         line-height: 28px;
         color: #626687;
         opacity: 0.75;
     }
 
-    &_house{
-        div{
-            display: flex;
-            align-items: center;
-
-            span{
-                padding-left: 16px;
-            }
-
-            // &:first-child{
-
-            // }
+    &_details{
+        &_title{
+            font-weight: 600;
+font-size: 16px;
+line-height: 28px;
+color: #1B1C57;
+opacity: 0.75;
+padding: 16px 0 ;
         }
+    }
+
+    &_house{
+        display: flex;
     }
 
     &_video {
@@ -56,5 +57,13 @@ padding-bottom: 140px;
         backdrop-filter: blur(35px);
         border-radius: 12px;
         padding: 35px 42px 37px;
+        height: 444px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        &_wrapper{
+            width: 620px;
+        }
     }
 }
