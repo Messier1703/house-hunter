@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { articles } from "@/constants/articles";
-import s from "./Info.module.scss";
+import s from "./-Info.module.scss";
 
 const Info = () => {
     return (
