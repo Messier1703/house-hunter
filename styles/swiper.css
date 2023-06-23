@@ -55,3 +55,11 @@
     top: 50%;
     transform: translateY(-10%);
 }
+
+.swiper-pagination-bullet {
+    background: #bdbdbd;
+  }
+  
+.swiper-pagination-bullet-active {
+    background: #f2994a;
+}

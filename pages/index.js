@@ -1,15 +1,11 @@
+import Benefits from "@/components/sections/benefits/Benefits";
+import Info from "@/components/sections/info/Info";
+import Main from "@/components/sections/main/Main";
+import Reviews from "@/components/sections/reviews/Reviews";
+import Second from "@/components/sections/second/Second";
+import Tour from "@/components/sections/tour/Tour";
 import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
-import First from "@/components/First/First";
-import Second from "@/components/Second/Second";
-import Benefits from "@/components/Benefits/Benefits";
-import Reviews from "@/components/Reviews/Reviews";
-import Info from "@/components/Info/Info";
-import Tour from "@/components/Tour/Tour";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
     return (
@@ -26,12 +22,12 @@ export default function Home() {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <First />
-            <Second />
-            <Benefits />
-            <Tour />
-            <Reviews />
-            <Info />
+            <Main/>
+            <Second/>
+            <Benefits/>
+            <Tour/>
+            <Reviews/>
+            <Info/>
         </>
     );
 }

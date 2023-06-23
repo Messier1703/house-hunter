@@ -3,12 +3,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import { Autoplay } from "swiper";
+import { Autoplay, Pagination } from "swiper";
 import Image from "next/image";
 import { reviews } from "@/constants/reviews";
 import s from "./Reviews.module.scss";
 
-const Reviews = () => {
+function Reviews() {
     return (
         <div className={s.reviews}>
             <div className="container">
@@ -16,8 +16,7 @@ const Reviews = () => {
                     src="/rectangle-deco.svg"
                     width={32}
                     height={1}
-                    className={s.reviews_rectangle_deco}
-                />
+                    className={s.reviews_rectangle_deco} />
                 <h6 className={s.reviews_title}>See Our Review</h6>
                 <h2 className={s.reviews_desc}>What Our User Say About Us</h2>
             </div>
@@ -37,19 +36,21 @@ const Reviews = () => {
                     breakpoints={{
                         1200: {
                             slidesPerView: 2,
-                            spaceBetween: 400
+                            spaceBetween: 400,
                         },
                     }}
-                    modules={[Autoplay]}
+                    modules={[Autoplay, Pagination]}
+                    pagination={{ clickable: true }}
                 >
                     {reviews.map((item) => (
                         <SwiperSlide key={item.id}>
-                            <div className={s.reviews_swiper_slide}
-                            style={{
-                                backgroundImage: "url(/forest-house.png)",
-                                backgroundSize: "cover",
-                                backgroundPosition: "center",
-                            }}
+                            <div
+                                className={s.reviews_swiper_slide}
+                                style={{
+                                    backgroundImage: "url(/forest-house.png)",
+                                    backgroundSize: "cover",
+                                    backgroundPosition: "center",
+                                }}
                             >
                                 <div className={s.reviews_swiper_slide_content}>
                                     <h2 className={s.reviews_swiper_slide_title}>{item.title}</h2>

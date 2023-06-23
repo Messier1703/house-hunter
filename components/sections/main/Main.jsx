@@ -1,29 +1,32 @@
 import React from "react";
 import Image from "next/image";
-import s from "./First.module.scss";
+import s from "./Main.module.scss";
 import { firstHouses } from "@/constants/firstHouses";
 import { partnerships } from "@/constants/Partnerships";
+import { mainStats } from "@/constants/mainStats";
 
-const First = () => {
+const Main = () => {
     return (
-        <div className={s.first}>
+        <div className={s.main}>
             <div className="container">
-                <div className={s.first_wrapper}>
-                    <h1 className={s.first_title}>
-                        Good Living Better live{" "}
-                        <span className={s.first_title_outlined}>
+                <div className={s.main_wrapper}>
+                    <h1 className={s.main_title}>
+                        Good Living Better live
+                        {" "}
+                        <span className={s.main_title_outlined}>
                             your dreams
-                        </span>{" "}
+                        </span>
+                        {" "}
                         easily here
                     </h1>
-                    <p className={s.first_desc}>
+                    <p className={s.main_desc}>
                         Everything you need about finding your place to live
                         will be here, where it will be easier for you. Our
                         furniture is made from selected and best quality
                         materials that are suitable for your dream home
                     </p>
-                    <div className={s.first_search}>
-                        <div className={s.first_search_logo}>
+                    <div className={s.main_search}>
+                        <div className={s.main_search_logo}>
                             <svg
                                 width="18"
                                 height="22"
@@ -40,9 +43,9 @@ const First = () => {
                         <input
                             type="text"
                             placeholder="Search for the location you want!"
-                            className={s.first_search_input}
+                            className={s.main_search_input}
                         />
-                        <button className={s.first_search_btn}>
+                        <button className={s.main_search_btn}>
                             <span>Search</span>
                             <svg
                                 width="24"
@@ -58,11 +61,11 @@ const First = () => {
                             </svg>
                         </button>
                     </div>
-                    <div className="first_partnerships">
-                        <h3 className={s.first_partnerships_title}>
+                    <div className="main_partnerships">
+                        <h3 className={s.main_partnerships_title}>
                             Our Partnership
                         </h3>
-                        <div className={s.first_partnerships_logos}>
+                        <div className={s.main_partnerships_logos}>
                             {partnerships.map((item) => (
                                 <Image
                                     alt="Company Logo"
@@ -76,45 +79,47 @@ const First = () => {
                     </div>
                 </div>
             </div>
-            <div className={s.first_houses}>
+            <div className={s.main_houses}>
                 {firstHouses.map((item) => (
                     <div
-                        className={s.first_houses_card}
+                        className={s.main_houses_card}
                         style={{
                             backgroundImage: `url(${item.img})`,
                             backgroundSize: "cover",
                             backgroundPosition: "center",
-                            
+
                         }}
                         id={item.id}
                     />
                 ))}
             </div>
-            <div className={s.first_stats}>
-                <div className={s.first_stats_card}>
-                    <Image src="/stats-pic.png" width={171} height={121} className={s.first_stats_card_img}/>
+            <div className={s.main_stats}>
+                {/* <div className={s.main_stats_card}>
+                    <Image src="/stats-pic.png" width={171} height={121} className={s.main_stats_card_img} />
                     <div>
-                        <h2 className={s.first_stats_title}>1K+ People</h2>
-                        <p className={s.first_stats_details}>Successfully Getting Home</p>
+                        <h2 className={s.main_stats_title}>1K+ People</h2>
+                        <p className={s.main_stats_details}>Successfully Getting Home</p>
                     </div>
                 </div>
-                <div className={s.first_stats_card}>
-                    <Image src="/stats-villa.png" width={57} height={57} className={s.first_stats_card_img}/>
+                <div className={s.main_stats_card}>
+                    <Image src="/stats-villa.png" width={57} height={57} className={s.main_stats_card_img} />
                     <div>
-                        <h2 className={s.first_stats_title}>1K+ People</h2>
-                        <p className={s.first_stats_details}>Successfully Getting Home</p>
+                        <h2 className={s.main_stats_title}>1K+ People</h2>
+                        <p className={s.main_stats_details}>Successfully Getting Home</p>
                     </div>
-                </div>
-                <div className={s.first_stats_card}>
-                    <Image src="/stats-pfp.png" width={121} height={121} className={s.first_stats_card_img}/>
-                    <div>
-                        <h2 className={s.first_stats_title}>1K+ People</h2>
-                        <p className={s.first_stats_details}>Successfully Getting Home</p>
+                </div> */}
+                {mainStats.map((item) => (
+                    <div className={s.main_stats_card} key={item.id}>
+                        <Image className={s.main_stats_img} src={item.img} width={56} height={56}/>
+                        <div className={s.main_stats_text}>
+                        <h4 className={s.main_stats_title}>{item.title}</h4>
+                        <p className={s.main_stats_details}>{item.desc}</p>
+                        </div>
                     </div>
-                </div>
+                ))}
             </div>
         </div>
     );
 };
 
-export default First;
+export default Main;

@@ -1,6 +1,7 @@
 import React from "react";
-import { tourIcons } from "@/constants/tour";
+import { tour } from "@/constants/tour";
 import s from "./Tour.module.scss";
+import YouTubeVideo from "@/components/UI/youtube/YouTube";
 
 const Tour = () => {
     return (
@@ -17,18 +18,14 @@ const Tour = () => {
                             curated to become the home of your dreams!
                         </p>
                         <p className={s.tour_details_title}>House Detail</p>
-                        {tourIcons.map((item) => (
-                            <div className={s.tour_house}>
-                                <div className={s.tour_house_icons}>
-                                    {item.bedroom}<span>4 Bedrooms</span>
-                                    {item.carport}<span>1 Carport</span>
-                                </div>
-                                <div className={s.tour_house_icons}>
-                                    {item.bathroom}<span>2 Bathrooms</span>
-                                    {item.floors}<span>2 Floors</span>
-                                </div>
+                        <div className={s.tour_house_stats}>
+                        {tour.map((item) => (
+                            <div className={s.tour_house_property} key={item.id}>
+                                {item.icon}
+                                <span className={s.tour_house_property_title}>{item.title}</span>
                             </div>
                         ))}
+                        </div>
                     </div>
                     <div className={s.tour_video}>
                         <div className={s.tour_video_btn}>
@@ -38,8 +35,9 @@ const Tour = () => {
                                 <ellipse cx="32.3634" cy="4.4394" rx="4.37345" ry="4.4394" fill="#13DA67" />
                             </svg>
                         </div>
-                        <div className={s.tour_video_wrapper}></div>
-                        <video src="https://www.youtube.com/watch?v=_VTtXA2Cy-o&t=872s" controls autoplay />
+                        <div className={s.tour_video_wrapper}>
+                            <YouTubeVideo videoId="idJthveed1M" />
+                        </div>
                     </div>
                 </div>
             </div>

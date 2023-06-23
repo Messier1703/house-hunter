@@ -1,4 +1,4 @@
-import Layouts from '@/components/Layouts/Layouts'
+import Layouts from '@/components/UI/layouts/Layouts'
 import '@/styles/swiper.css'
 import '@/styles/globals.css'
 
