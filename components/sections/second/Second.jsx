@@ -15,12 +15,12 @@ const Second = () => {
         <div className={s.featured}>
             <div className="container">
                 <div className={s.featured_wrapper}>
-                    <Image
+                    {/* <Image
                         src="/rectangle-deco.png"
                         width={32}
                         height={1}
                         className={s.rectangle_deco}
-                    />
+                    /> */}
                     <div className={s.featured_nav}>
                         <div>
                             <h6 className={s.featured_desc}>

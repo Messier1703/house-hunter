@@ -82,6 +82,62 @@
         }
     }
 
+    &_flex {
+        @media(max-width: 420px) {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+    }
+
+    &_user {
+        display: flex;
+        gap: 60px;
+        padding-top: 68px;
+
+        @media(max-width: 420px) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 0;
+        }
+
+        &_pfp {
+            @media(max-width: 420px) {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        &_name {
+            color: #0E1735;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 24px;
+        }
+
+        &_role {
+            color: #888B97;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+        }
+
+        &_contact {
+            border-radius: 32px;
+            background: #F2994A;
+            display: inline-flex;
+            padding: 12px 16px;
+            align-items: center;
+            color: #FFF;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 22px;
+        }
+    }
+
     &_video {
         width: 50%;
         background: linear-gradient(111.29deg,
@@ -101,10 +157,89 @@
 
         &_wrapper {
             width: 520px;
+
+            @media (max-width: 960px) {
+                width: 100%;
+            }
         }
 
         &_btn {
             padding-bottom: 24px;
+        }
+    }
+
+    @media (max-width: 960px) {
+        padding-bottom: 80px;
+
+        &_wrapper {
+            align-items: center;
+        }
+
+        &_text {
+            width: 100%;
+        }
+
+        &_subtitle {
+            font-size: 24px;
+            line-height: 32px;
+            padding: 8px 0 12px;
+        }
+
+        &_desc {
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        &_details_title {
+            font-size: 14px;
+            line-height: 24px;
+            padding: 12px 0;
+        }
+
+        &_house_stats {
+            grid-template-columns: 1fr;
+        }
+
+        &_house_property {
+            align-items: flex-start;
+
+            &_title {
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+
+        &_user {
+
+            &_name {
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            &_role {
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            &_contact {
+                padding: 8px 12px;
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+
+        &_video {
+            padding: 25px 30px 30px;
+            width: 100%;
+
+            &_wrapper {
+                width: 100%;
+            }
+
+            &_btn{
+                visibility: hidden;
+                height: 0px;
+            }
         }
     }
 }

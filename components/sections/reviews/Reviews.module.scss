@@ -1,4 +1,6 @@
 .reviews {
+
+
     &_title {
         font-weight: 500;
         font-size: 14px;
@@ -20,28 +22,38 @@
     }
 
     &_swiper {
-        // width: 100%;
-        // display: flex;
-        // justify-content: center;
 
         &_slide {
             width: 740px;
-            height: 400px;
+            height: 500px;
             position: relative;
             border-radius: 8px;
+            background: url('/forest-house.png') no-repeat top;
+
             @media(max-width: 760px) {
-                    width: 80%;
-                }
+                width: 80%;
+                height: 600px;
+            }
+
+            @media(max-width: 420px) {
+                width: 80%;
+                height: 700px;
+            }
+
+            &_wrapper {
+                display: flex;
+                justify-content: space-between;
+            }
 
             &_content {
                 width: 80%;
-                height: 100%;
                 background: #FFFFFF;
                 box-shadow: 0px 9px 32px rgba(89, 92, 219, 0.05);
                 border-radius: 16px;
                 top: 256px;
                 left: 10%;
                 position: absolute;
+                padding: 32px;
 
                 @media(max-width: 760px) {
                     width: 100%;
@@ -65,30 +77,26 @@
                 line-height: 24px;
                 color: #626687;
                 opacity: 0.75;
+                padding-bottom: 24px;
             }
 
             &_user {
                 display: flex;
                 align-items: center;
+            }
 
-                &_name {
-                    font-weight: 500;
-                    font-size: 14px;
-                    line-height: 22px;
-                    color: #0e1735;
-                }
+            &_name {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 22px;
+                color: #0e1735;
+            }
 
-                &_role {
-                    font-weight: 500;
-                    font-size: 14px;
-                    line-height: 22px;
-                    color: #888b97;
-                }
-
-                @media(max-width: 760px) {
-                    flex-direction: column;
-                    align-items: center;
-                }
+            &_role {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 22px;
+                color: #888b97;
             }
 
             &_rating {

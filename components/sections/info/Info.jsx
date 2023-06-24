@@ -63,22 +63,9 @@ const Info = () => {
                             backgroundImage: "url(/featured-article-bg.png)",
                             backgroundSize: "cover",
                             backgroundPosition: "center",
-                            // width: "560px",
-                            // height: "327px",
                             position: "relative",
                         }}
                     >
-                        {/* <div
-                            style={{
-                                backgroundColor: "rgba(0, 0, 0, 0.5)", // Semi-transparent black overlay
-                                width: "100%",
-                                height: "100%",
-                                position: "absolute",
-                                top: 0,
-                                left: 0,
-                                borderRadius: "16px",
-                            }}
-                        /> */}
                         <div className={s.articles_featured_name}>
                             <Image
                                 src="/cameron-williamson-pfp.png"
